@@ -15,6 +15,7 @@ BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	java-gtk-devel >= 2.4.5
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.8.0
+BuildRequires:	pkgconfig
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

@@ -2,17 +2,17 @@
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome
-Version:	2.8.1
+Version:	2.8.2
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.8/%{pname}-%{version}.tar.bz2
-# Source0-md5:	52a5d0e2f9f2ced48ae22e0ab02ee959
+# Source0-md5:	3fa03e9809f032540388b43dbf0cf582
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	java-gtk-devel >= 2.4.5
+BuildRequires:	java-gtk-devel >= 2.4.6
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.8.0
 BuildRequires:	pkgconfig

@@ -1,4 +1,4 @@
-%define	pname	libgnome-java
+%define		pname	libgnome-java
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome

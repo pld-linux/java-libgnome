@@ -12,6 +12,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.5/%{pname}-%{version}
 # Source0-md5:	ff75cd4398108c8ea8efaa8739a57495
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
+Patch2:		%{name}-gcjjar.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -47,13 +48,15 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 %setup -q -n %{pname}-%{version}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 version="%{version}"; export version
 apiversion="%{api}"; export apiversion
 gtkapiversion="%{gtkapi}"; export gtkapiversion
 %{__autoconf}
-%configure
+%configure \
+	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
 %{__make}
 
 %install

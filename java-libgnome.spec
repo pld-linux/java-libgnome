@@ -20,6 +20,7 @@ BuildRequires:	libgcj-devel >= 3.3.2
 BuildRequires:	libgnomeui-devel >= 2.5.4
 BuildRequires:	java-gtk-devel >= 2.3.5
 BuildRequires:	slocate
+Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

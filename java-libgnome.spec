@@ -12,11 +12,10 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gcc-java >= 3.3.2
+BuildRequires:	gcc-java >= 5:3.3.2
 BuildRequires:	java-gtk-devel >= 2.4.3
-BuildRequires:	libgcj-devel >= 3.3.2
+BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.7.2
-BuildRequires:	slocate
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)

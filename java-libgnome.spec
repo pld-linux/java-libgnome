@@ -1,25 +1,24 @@
 %define	pname	libgnome-java
-%define	api	2.5
-%define	gtkapi	2.3
+%define	api	2.6
+%define	gtkapi	2.4
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome
-Version:	2.5.5
+Version:	2.5.6
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.5/%{pname}-%{version}.tar.bz2
-# Source0-md5:	ff75cd4398108c8ea8efaa8739a57495
+# Source0-md5:	5020696a30861e5ec3701d4d29aee453
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
-Patch2:		%{name}-gcjjar.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 3.3.2
-BuildRequires:	java-gtk-devel >= 2.3.5
+BuildRequires:	java-gtk-devel >= 2.3.6
 BuildRequires:	libgcj-devel >= 3.3.2
-BuildRequires:	libgnomeui-devel >= 2.5.4
+BuildRequires:	libgnomeui-devel >= 2.5.90
 BuildRequires:	slocate
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
@@ -48,7 +47,6 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 %setup -q -n %{pname}-%{version}
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 version="%{version}"; export version
@@ -65,11 +63,6 @@ install -d $RPM_BUILD_ROOT{%{_datadir}/java-gnome,%{_libdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-ln -sf gnome%{api}-%{version}.jar \
-	$RPM_BUILD_ROOT%{_datadir}/java-gnome/gnome%{api}.jar
-ln -sf libgnomejava%{api}.so.%{version} \
-	$RPM_BUILD_ROOT%{_libdir}/libgnomejava%{api}.so
 
 %clean
 rm -rf $RPM_BUILD_ROOT

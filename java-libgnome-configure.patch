@@ -1,0 +1,28 @@
+diff -urN aa/libgnome-java-2.5.3/configure.in libgnome-java-2.5.3/configure.in
+--- aa/libgnome-java-2.5.3/configure.in	2004-01-19 22:44:49.000000000 +0100
++++ libgnome-java-2.5.3/configure.in	2004-01-24 23:52:15.295642264 +0100
+@@ -50,8 +50,8 @@
+ dnl them automatically
+ 
+ 
+-GTKJAR=$(DESTDIR)$(datadir)/java-gtk/gtk$(gtkapiversion).jar
+-NATIVEGTKJAR=$(DESTDIR)$(libdir)/libgtkjar$(gtkapiversion).so
++GTKJAR=${datadir}/java-gnome/gtk${gtkapiversion}.jar
++NATIVEGTKJAR=${libdir}/libgtkjar${gtkapiversion}.so
+ JG_GTK_LIB_PATH=../../gtk/lib/
+ 
+ dnl ------------------------------------------------------------------------
+@@ -61,11 +61,11 @@
+ AC_SUBST(NATIVEGTKJAR)
+ AC_SUBST(JG_GTK_LIB_PATH)
+ 
+-if !test -e $GTKJAR; then
++if ! test -e $GTKJAR; then
+ 	echo "GTK Jar file $GTKJAR not found.";
+ 	exit 8;
+ fi
+-if !test -e $NATIVEGTKJAR; then
++if ! test -e $NATIVEGTKJAR; then
+ 	echo "gcj compiled native jar file $NATIVEGTKJAR not found.";
+ 	exit 8;
+ fi

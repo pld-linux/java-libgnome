@@ -1,0 +1,20 @@
+diff -urN aa/libgnome-java-2.7.4/Makefile.in libgnome-java-2.7.4/Makefile.in
+--- aa/libgnome-java-2.7.4/Makefile.in	2004-07-20 15:12:28.000000000 +0200
++++ libgnome-java-2.7.4/Makefile.in	2004-07-21 15:19:17.691957328 +0200
+@@ -57,12 +57,15 @@
+ 
+ # Java-Gnome for use with a JVM
+ install: @GCJ_INSTALL_TARGETS@
++	-$(INSTALL) -d $(DESTDIR)$(libdir)/pkgconfig
++	-$(INSTALL) -d $(DESTDIR)$(datadir)/java
++	-$(INSTALL) -d $(DESTDIR)$(datadir)/doc/libgnome$(apiversion)-java
+ 	$(INSTALL) -s -m644 lib/libgnomejava$(apiversion).so.$(version) $(DESTDIR)$(libdir)/
+ 	$(INSTALL) -m644 lib/gnome$(apiversion)-$(version).jar $(DESTDIR)$(datadir)/java
+ 	ln -s -f libgnomejava$(apiversion).so.$(version) $(DESTDIR)$(libdir)/libgnomejava$(apiversion).so
+ 	ln -s -f gnome$(apiversion)-$(version).jar $(DESTDIR)$(datadir)/java/gnome$(apiversion).jar
+ 	-for f in $(DOCUMENTS); do $(INSTALL) -m644 $$f $(DESTDIR)$(datadir)/doc/libgnome$(apiversion)-java || exit 1; done
+-	$(INSTALL) -m644 gnome2-java.pc $(libdir)/pkgconfig/
++	$(INSTALL) -m644 gnome2-java.pc $(DESTDIR)$(libdir)/pkgconfig/
+ 
+ # Java-Gnome for use with applications compiled natively with gcj.
+ native_install:

@@ -52,7 +52,7 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/java,%{_libdir},%{_pkgconfigdir}}
+install -d $RPM_BUILD_ROOT{%{_javadir},%{_libdir},%{_pkgconfigdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -71,5 +71,5 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_datadir}/java/*
+%{_javadir}/*
 %{_pkgconfigdir}/*.pc

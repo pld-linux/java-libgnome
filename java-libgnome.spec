@@ -46,7 +46,7 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 %{__aclocal} -I `pkg-config --variable macro_dir gtk2-java`
 %{__autoconf}
 %configure \
-	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
+	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar`
 
 %{__make}
 

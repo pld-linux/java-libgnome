@@ -1,24 +1,21 @@
 %define	pname	libgnome-java
-%define	api	2.7
-%define	gtkapi	2.4
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome
-Version:	2.7.2
+Version:	2.7.4
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.7/%{pname}-%{version}.tar.bz2
-# Source0-md5:	0b3d8fc12e12886f6d53d1b5fb7e6ce3
-Patch0:		%{name}-configure.patch
-Patch1:		%{name}-version_vars.patch
+# Source0-md5:	a6b58dc3da3d9547cf5753fc4e4bf195
+Patch0:		%{name}-install.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 3.3.2
-BuildRequires:	java-gtk-devel >= 2.4.2
+BuildRequires:	java-gtk-devel >= 2.4.3
 BuildRequires:	libgcj-devel >= 3.3.2
-BuildRequires:	libgnomeui-devel >= 2.7.1
+BuildRequires:	libgnomeui-devel >= 2.7.2
 BuildRequires:	slocate
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
@@ -46,12 +43,8 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 %prep
 %setup -q -n %{pname}-%{version}
 %patch0 -p1
-%patch1 -p1
 
 %build
-version="%{version}"; export version
-apiversion="%{api}"; export apiversion
-gtkapiversion="%{gtkapi}"; export gtkapiversion
 %{__autoconf}
 %configure \
 	GCJ_JAR=`echo /usr/share/java/libgcj*.jar`
@@ -73,10 +66,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS NEWS README THANKS TODO*
+%doc NEWS TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_datadir}/java-gnome/*
+%{_datadir}/java/*
+%{_pkgconfigdir}/*.pc

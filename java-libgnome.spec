@@ -1,24 +1,24 @@
 %define	pname	libgnome-java
-%define	api	2.6
+%define	api	2.7
 %define	gtkapi	2.4
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome
-Version:	2.6.0
+Version:	2.7.2
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.6/%{pname}-%{version}.tar.bz2
-# Source0-md5:	e21d89743468ce83d2d0aefbadd2d0eb
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.7/%{pname}-%{version}.tar.bz2
+# Source0-md5:	0b3d8fc12e12886f6d53d1b5fb7e6ce3
 Patch0:		%{name}-configure.patch
 Patch1:		%{name}-version_vars.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gcc-java >= 3.3.2
-BuildRequires:	java-gtk-devel >= 2.4.0
+BuildRequires:	java-gtk-devel >= 2.4.2
 BuildRequires:	libgcj-devel >= 3.3.2
-BuildRequires:	libgnomeui-devel >= 2.6.0
+BuildRequires:	libgnomeui-devel >= 2.7.1
 BuildRequires:	slocate
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java

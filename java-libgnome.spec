@@ -8,7 +8,7 @@ License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.7/%{pname}-%{version}.tar.bz2
 # Source0-md5:	a6b58dc3da3d9547cf5753fc4e4bf195
-Patch0:		%{name}-install.patch
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,7 +53,7 @@ Pliki nag³ówkowe biblioteki java-libgnome.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/java-gnome,%{_libdir}}
+install -d $RPM_BUILD_ROOT{%{_datadir}/java,%{_libdir},%{_pkgconfigdir}}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT

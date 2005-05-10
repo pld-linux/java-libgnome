@@ -58,21 +58,23 @@ Tutorial i przyk³ady dla java-libgnome.
 %{__aclocal} -I `pkg-config --variable macro_dir gtk2-java`
 %{__autoconf}
 %configure \
-		GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
-		--without-javadocs
+	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
+	--without-javadocs
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_libdir},%{_pkgconfigdir}} \
-		$RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+	$RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 	
 %{__make} install \
-		DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT
 
 mv -f $RPM_BUILD_ROOT%{_docdir}/%{pname}-%{version}/examples \
         $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+rm -f $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/*.in
 
 %clean
 rm -rf $RPM_BUILD_ROOT

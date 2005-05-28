@@ -75,7 +75,7 @@ mv -f $RPM_BUILD_ROOT%{_docdir}/%{pname}-%{version}/examples \
         $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 rm -f $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/examples/*.in
-rm -rf $RPM_BUILD_ROOT%{_docdir}/%{pname}-%{version}
+rm -f $RPM_BUILD_ROOT%{_docdir}/%{pname}-%{version}/{AUTHORS,COPYING,NEWS,README}
 
 %clean
 rm -rf $RPM_BUILD_ROOT

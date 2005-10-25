@@ -2,24 +2,29 @@
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Java dla libgnome
 Name:		java-libgnome
-Version:	2.10.1
+Version:	2.12.0
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{pname}/2.10/%{pname}-%{version}.tar.bz2
-# Source0-md5:	c1b47338bafe4c7f89d1cb505c26a8ce
+Source0:	http://research.operationaldynamics.com/linux/java-gnome/dist/%{pname}-%{version}.tar.gz
+# Source0-md5:	cbabafc971d49784aab879a6bc75be1c
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	java-gtk-devel >= 2.6.0
+BuildRequires:	java-cairo-devel >= 1.0.0
+BuildRequires:	java-glib-devel >= 0.2.0
+BuildRequires:	java-gtk-devel >= 2.8.0
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.8.0
+BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Obsoletes:	java-gnome
 Obsoletes:	libgnome-java
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		macros  %{_datadir}/glib-java/macros
 
 %description
 Java interface for libgnome.
@@ -55,7 +60,9 @@ Tutorial i przyk³ady dla java-libgnome.
 %setup -q -n %{pname}-%{version}
 
 %build
-%{__aclocal} -I `pkg-config --variable macro_dir gtk2-java`
+%{__libtoolize}
+%{__aclocal} -I `pkg-config --variable macro_dir gtk2-java` -I %{macros}
+%{__automake}
 %{__autoconf}
 %configure \
 	GCJ_JAR=`echo %{_datadir}/java/libgcj*.jar` \
@@ -86,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
-%attr(755,root,root) %{_libdir}/lib*-2.10.so
+%attr(755,root,root) %{_libdir}/lib*-2.12.so
 
 %files devel
 %defattr(644,root,root,755)

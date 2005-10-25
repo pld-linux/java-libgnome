@@ -13,8 +13,6 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	java-cairo-devel >= 1.0.0
-BuildRequires:	java-glib-devel >= 0.2.0
 BuildRequires:	java-gtk-devel >= 2.8.0
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.8.0
@@ -37,6 +35,7 @@ Summary:	Header files for java-libgnome library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libgnome
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	java-gtk-devel >= 2.8.0
 Obsoletes:	libgnome-java-devel
 
 %description devel

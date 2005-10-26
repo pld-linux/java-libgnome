@@ -1,6 +1,6 @@
 %define		pname	libgnome-java
 Summary:	Java interface for libgnome
-Summary(pl):	Wrapper Java dla libgnome
+Summary(pl):	Wrapper Javy dla libgnome
 Name:		java-libgnome
 Version:	2.12.0
 Release:	1
@@ -28,7 +28,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Java interface for libgnome.
 
 %description -l pl
-Wrapper Java dla libgnome.
+Wrapper Javy dla libgnome.
 
 %package devel
 Summary:	Header files for java-libgnome library

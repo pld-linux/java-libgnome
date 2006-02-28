@@ -45,9 +45,9 @@ Header files for java-libgnome library.
 Pliki nag³ówkowe biblioteki java-libgnome.
 
 %package doc
-Summary:        Tutorial and examples for java-libgnome
-Summary(pl):    Tutorial i przyk³ady dla java-libgnome
-Group:          Documentation
+Summary:	Tutorial and examples for java-libgnome
+Summary(pl):	Tutorial i przyk³ady dla java-libgnome
+Group:		Documentation
 
 %description doc
 Tutorial and examples for java-libgnome.
@@ -73,7 +73,7 @@ Tutorial i przyk³ady dla java-libgnome.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_libdir},%{_pkgconfigdir}} \
 	$RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-	
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 

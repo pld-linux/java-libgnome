@@ -2,20 +2,20 @@
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Javy dla libgnome
 Name:		java-libgnome
-Version:	2.12.5
+Version:	2.12.6
 Release:	1
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnome-java/2.12/%{pname}-%{version}.tar.gz
-# Source0-md5:	0939beef987c13b6d55487b9ad206eb8
+# Source0-md5:	85da995142f6cd3b6f727d86aa8708ec
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	java-gtk-devel >= 2.9.3
+BuildRequires:	java-gtk-devel >= 2.10.0
 BuildRequires:	libgcj-devel >= 5:3.3.2
-BuildRequires:	libgnomeui-devel >= 2.16.0
+BuildRequires:	libgnomeui-devel >= 2.16.1
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 Obsoletes:	java-gnome
@@ -35,7 +35,7 @@ Summary:	Header files for java-libgnome library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libgnome
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	java-gtk-devel >= 2.9.3
+Requires:	java-gtk-devel >= 2.10.0
 Obsoletes:	libgnome-java-devel
 
 %description devel

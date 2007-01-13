@@ -2,18 +2,18 @@
 Summary:	Java interface for libgnome
 Summary(pl):	Wrapper Javy dla libgnome
 Name:		java-libgnome
-Version:	2.12.6
+Version:	2.12.7
 Release:	1
 License:	LGPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnome-java/2.12/%{pname}-%{version}.tar.gz
-# Source0-md5:	85da995142f6cd3b6f727d86aa8708ec
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnome-java/2.12/%{pname}-%{version}.tar.bz2
+# Source0-md5:	d0ed6451b093c732bbc23484c71bce1a
 URL:		http://java-gnome.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	docbook-utils
 BuildRequires:	gcc-java >= 5:3.3.2
-BuildRequires:	java-gtk-devel >= 2.10.0
+BuildRequires:	java-gtk-devel >= 2.10.2
 BuildRequires:	libgcj-devel >= 5:3.3.2
 BuildRequires:	libgnomeui-devel >= 2.16.1
 BuildRequires:	libtool
@@ -35,7 +35,7 @@ Summary:	Header files for java-libgnome library
 Summary(pl):	Pliki nag³ówkowe biblioteki java-libgnome
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	java-gtk-devel >= 2.10.0
+Requires:	java-gtk-devel >= 2.10.2
 Obsoletes:	libgnome-java-devel
 
 %description devel
@@ -65,7 +65,6 @@ Tutorial i przyk³ady dla java-libgnome.
 %{__autoconf}
 %configure \
 	GCJFLAGS="%{rpmcflags}" \
-	JAR=%{_bindir}/fastjar \
 	--without-javadocs
 
 %{__make}

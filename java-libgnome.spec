@@ -1,6 +1,6 @@
 %define		pname	libgnome-java
 Summary:	Java interface for libgnome
-Summary(pl):	Wrapper Javy dla libgnome
+Summary(pl.UTF-8):   Wrapper Javy dla libgnome
 Name:		java-libgnome
 Version:	2.12.7
 Release:	1
@@ -27,12 +27,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Java interface for libgnome.
 
-%description -l pl
+%description -l pl.UTF-8
 Wrapper Javy dla libgnome.
 
 %package devel
 Summary:	Header files for java-libgnome library
-Summary(pl):	Pliki nag³ówkowe biblioteki java-libgnome
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki java-libgnome
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	java-gtk-devel >= 2.10.2
@@ -41,19 +41,19 @@ Obsoletes:	libgnome-java-devel
 %description devel
 Header files for java-libgnome library.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki java-libgnome.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki java-libgnome.
 
 %package doc
 Summary:	Tutorial and examples for java-libgnome
-Summary(pl):	Tutorial i przyk³ady dla java-libgnome
+Summary(pl.UTF-8):   Tutorial i przykÅ‚ady dla java-libgnome
 Group:		Documentation
 
 %description doc
 Tutorial and examples for java-libgnome.
 
-%description doc -l pl
-Tutorial i przyk³ady dla java-libgnome.
+%description doc -l pl.UTF-8
+Tutorial i przykÅ‚ady dla java-libgnome.
 
 %prep
 %setup -q -n %{pname}-%{version}

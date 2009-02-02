@@ -5,7 +5,7 @@ Name:		java-libgnome
 Version:	2.12.7
 Release:	2
 License:	LGPL
-Group:		Libraries
+Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnome-java/2.12/%{pname}-%{version}.tar.bz2
 # Source0-md5:	d0ed6451b093c732bbc23484c71bce1a
 URL:		http://java-gnome.sourceforge.net/

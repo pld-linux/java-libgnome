@@ -3,7 +3,7 @@ Summary:	Java interface for libgnome
 Summary(pl.UTF-8):	Wrapper Javy dla libgnome
 Name:		java-libgnome
 Version:	2.12.7
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Libraries/Java
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/libgnome-java/2.12/%{pname}-%{version}.tar.bz2
